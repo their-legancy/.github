@@ -5,10 +5,10 @@ date : "2022-04-18T11:00:00Z"
 description : "Npm outdate command help to find old packages in your current project."
 image : "images/zin-aung.png"
 images : ["images/zin-aung.png"]
-slug : "Aung Khant"
+slug : "Aung kyaw"
 summary : "Npm outdate command help to find old packages in your current project."
-tags : ["Aung", "Khant"]
-title : "Aung Khant"
+tags : ["Aung", "kyaw"]
+title : "Aung kyaw"
 age: "18"
 draft : false
 ---
