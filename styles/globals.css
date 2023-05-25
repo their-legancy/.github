@@ -13,7 +13,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
+body {
+  background-color: #000;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -46,4 +48,7 @@ code {
   margin-top: -76px;
   padding: 0 40px 40px;
   background-color: rgba(217, 217, 217, 0.26);
+}
+.align-self-flex-end {
+  align-self: flex-end;
 }

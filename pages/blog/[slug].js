@@ -5,51 +5,37 @@ import { marked } from 'marked'
 import Link from 'next/link'
 import { slugify, ImageUrl } from '../../utils'
 import { NextSeo } from 'next-seo';
+import Image from 'next/image';
 
 export default function PostPage({ content, frontmatter }) {
   const date = new Date(frontmatter.date)
-  const imageMeta= frontmatter.images.map(
-      image  =>  {
-       const imageUrl =  ImageUrl(image)
-        return {
+  const imageMeta = frontmatter.images.map(
+    image => {
+      const imageUrl = ImageUrl(image)
+      return {
         url: imageUrl,
         width: 1224,
         height: 724,
         alt: frontmatter.title,
         type: 'image/jpeg',
       }
-     }
-    )
+    }
+  )
 
-   
+
   return (
     <>
-     <NextSeo
-        title={frontmatter.title} 
-        description={frontmatter.summary}
-        openGraph={{
-          url: 'https:officialrajdeepsingh.dev',
-          title: frontmatter.title,
-          description: frontmatter.summary ,
-          type: 'article',
-          article: {
-            publishedTime: frontmatter.date,
-            authors: [
-              'https://officialrajdeepsingh.dev/pages/about',
-            ],
-            tags: frontmatter.tags,
-          },
-          images: imageMeta,
-          site_name: 'Rajdeep Singh',
-        }}      
-      />
-      <div className="container my-5">
-        <div className="row">
-          <div className="col-lg-10 m-auto">
-            <div className='card card-page'>
-              <a href={`/blog/${frontmatter.slug}`} > <img className="card-img-top" src={ImageUrl(frontmatter.image)} alt="..." /></a>
 
-              <h1 className='post-title mt-2 p-2'>{frontmatter.title}</h1>
+      <div className="blog mx-auto px-8 py-8 bg-[#ffffff]">
+        <div className='mb-4'>
+        <Link href={`/`}>
+          <a className='flex flex-row aligns-center'><Image src="/back-arrow.jpeg" width={25} height={19} /><span className='ml-3'>Back to Home</span></a>
+        </Link>
+        </div>
+
+        <img className="mb-5 rounded-2xl" src={ImageUrl(frontmatter.image)} alt="..." />
+
+        {/* <h1 className='post-title mt-2 p-2'>{frontmatter.title}</h1>
               <div className='post-date m-1 p-2'>
 
                 <div><h6>{`${date.getMonth() + 1} - ${date.getDate()} - ${date.getFullYear()}`} </h6>  </div>
@@ -69,15 +55,20 @@ export default function PostPage({ content, frontmatter }) {
                 } </div>
 
 
-              </div>
+              </div> */}
+        <div className="flex flex-row"><label className='text-gray-400'>အမည် -</label><h2 className="ml-3 text-bold">{frontmatter.name}</h2></div>
+        <div className="flex flex-row"><label className='text-gray-400'>ပြောခဲ့သောစကား -</label><div class="ml-3">{frontmatter.what_was_said}</div></div>
+        <div className="flex flex-row"><label className='text-gray-400'>အဖွဲ့အစည်း -</label><div class="ml-3">{frontmatter.Organization}</div></div>
+        <div className="flex flex-row"><label className='text-gray-400'>နေရပ်လိပ်စာ -</label><div class="ml-3">{frontmatter.address}</div></div>
+        <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေ့ -</label><div class="ml-3">{frontmatter.the_day_of_the_fall}</div></div>
+        <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေရာ -</label><div class="ml-3">{frontmatter.the_place_of_the_fall}</div></div>
 
-              <div className='post-body p-5 m-auto' dangerouslySetInnerHTML={{ __html: marked.parse(content) }}>
+        <div className='post-body p-5 m-auto' dangerouslySetInnerHTML={{ __html: marked.parse(content) }}>
 
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+
+
     </>
   )
 }
@@ -87,7 +78,7 @@ export async function getStaticPaths() {
   //  Get files from the posts dir
   const files = fs.readdirSync(path.join('posts'))
 
-   // Get slug and frontmatter from posts
+  // Get slug and frontmatter from posts
   const temppaths = files.map((filename) => {
 
     // Get frontmatter

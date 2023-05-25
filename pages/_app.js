@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     <DefaultSeo {...SEO} />
     {/* <Header/> */}
     <Component {...pageProps} />
-    <Footer />
+    {/* <Footer /> */}
   </>)
 }
 
