@@ -45,10 +45,21 @@ code {
 }
 
 .move-top {
-  margin-top: -76px;
-  padding: 0 40px 40px;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px 0;
   background-color: rgba(217, 217, 217, 0.26);
 }
 .align-self-flex-end {
   align-self: flex-end;
+}
+.seach-form-wrapper input {
+  border: 1px solid #ddd;
+}
+.seach-form-wrapper button {
+  font-size: 12px;
+  padding: 10px 15px;
 }

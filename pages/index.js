@@ -47,7 +47,7 @@ export default function Home() {
               <Post key={index} post={post} />
             )) : <div className='m-auto p-5 mx-5 '>
               <h2 className='text-center text-white'>
-                {query.q ? `No post find base on ${query.q} ` : 'Please search in the above box, the result will show here!'}
+                {query.q ? `${query.q} အမည်ဖြင့် အချက်အလက်မရှိပါ။  ` : 'ကျေးဇူးပြု၍ အထက်ပါအကွက်တွင် ရှာဖွေပါ၊ ရလဒ်သည် ဤနေရာတွင် ပြပါမည်။'}
               </h2>
             </div>
         }

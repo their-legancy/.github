@@ -29,7 +29,8 @@ export default function PostPage({ content, frontmatter }) {
       <div className="blog mx-auto px-8 py-8 bg-[#ffffff]">
         <div className='mb-4'>
         <Link href={`/`}>
-          <a className='flex flex-row aligns-center'><Image src="/back-arrow.jpeg" width={25} height={19} /><span className='ml-3'>Back to Home</span></a>
+          <a className='flex flex-row aligns-center'><Image src="/back-arrow.jpeg" width={25} height={19} /><span className='ml-3'>
+ရှေ့သို့ ပြန်သွားရန်</span></a>
         </Link>
         </div>
 
@@ -63,9 +64,9 @@ export default function PostPage({ content, frontmatter }) {
         <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေ့ -</label><div class="ml-3">{frontmatter.the_day_of_the_fall}</div></div>
         <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေရာ -</label><div class="ml-3">{frontmatter.the_place_of_the_fall}</div></div>
 
-        <div className='post-body p-5 m-auto' dangerouslySetInnerHTML={{ __html: marked.parse(content) }}>
+        {/* <div className='post-body p-5 m-auto' dangerouslySetInnerHTML={{ __html: marked.parse(content) }}>
 
-        </div>
+        </div> */}
       </div>
 
 
