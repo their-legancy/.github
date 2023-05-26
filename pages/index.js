@@ -17,7 +17,7 @@ export default function Home() {
   search.map(
     (post) => {
       if (post.frontmatter.draft === false) {
-        if (post.frontmatter.title.toLowerCase().includes(query.q) || post.frontmatter.summary.toLowerCase().includes(query.q) || post.frontmatter.description.toLowerCase().includes(query.q)) {
+        if (post.frontmatter.name.toLowerCase().includes(query.q) || post.frontmatter.summary.toLowerCase().includes(query.q) || post.frontmatter.description.toLowerCase().includes(query.q)) {
           TempPosts.push(post)
         } else {
           TempPosts.push(null)
@@ -37,24 +37,24 @@ export default function Home() {
   return (
     <>
       <Banner />
-      
-        < section id="search-result" className="w-5/6 md:w-5/6  lg:w-4/6 xl:w-3/6 mx-auto bg-[#ffffff] flex font-medium items-self-start justify-center">
+
+      <section id="search-result" className="w-5/6 md:w-5/6  lg:w-4/6 xl:w-3/6 mx-auto bg-[#000000] flex font-medium items-self-start justify-center">
 
 
-      {
-        posts.length > 0 ?
-          posts.map((post, index) => (
-            <Post key={index} post={post} />
-          )) : <div className='m-auto p-5 mx-5 '>
-            <h2 className='text-center'>
-              {query.q ? `No post find base on ${query.q} ` : ''}
-            </h2>
-          </div>
-      }
+        {
+          posts.length > 0 ?
+            posts.map((post, index) => (
+              <Post key={index} post={post} />
+            )) : <div className='m-auto p-5 mx-5 '>
+              <h2 className='text-center text-white'>
+                {query.q ? `${query.q} အမည်ဖြင့် အချက်အလက်မရှိပါ။  ` : 'ကျေးဇူးပြု၍ အထက်ပါအကွက်တွင် ရှာဖွေပါ၊ ရလဒ်သည် ဤနေရာတွင် ပြပါမည်။'}
+              </h2>
+            </div>
+        }
 
 
-    </section >
-     
+      </section>
+
     </>
 
 

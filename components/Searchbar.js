@@ -31,11 +31,12 @@ export default function Searchbar() {
           onChange={change}
           value={search}
           className="block p-2  text-gray-900 bg-gray-50 rounded-lg  focus:pl-3 mr-3 w-80"
-          placeholder="Please type legend name"
+          placeholder="အမည်တစ်ခုရိုက်ပါ..."
 
         />
         <button type="submit"
-          className="text-white right-2.5 bottom-2.5 bg-[#60E0D4] hover:bg-[#60E0D4] focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#60E0D4] ">Search</button>
+          className="text-white right-2.5 bottom-2.5 bg-[#60E0D4] hover:bg-[#60E0D4] focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#60E0D4] ">
+          ရှာပါ</button>
       </form>
     </div>
   )
