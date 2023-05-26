@@ -1,5 +1,4 @@
 import Searchbar from "./Searchbar";
-import Sidebar from "./Searchbar";
 import Image from 'next/image';
 
 export default function Banner() {
