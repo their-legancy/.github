@@ -1,3 +1,3 @@
-const SITE_URL = 'http://localhost:3000/'
+const SITE_URL = 'https://next-js-mdacja2xw-braveheart.vercel.app/'
 
 export default SITE_URL

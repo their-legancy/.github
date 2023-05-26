@@ -28,10 +28,9 @@ export default function PostPage({ content, frontmatter }) {
 
       <div className="blog mx-auto px-8 py-8 bg-[#ffffff]">
         <div className='mb-4'>
-        <Link href={`/`}>
-          <a className='flex flex-row aligns-center'><Image src="/back-arrow.jpeg" width={25} height={19} /><span className='ml-3'>
-ရှေ့သို့ ပြန်သွားရန်</span></a>
-        </Link>
+          <Link href={`/`}>
+            <a className='flex flex-row aligns-center'><Image src="/back-arrow.jpeg" width={25} height={19} /><span className='ml-3'>ရှေ့သို့ ပြန်သွားရန်</span></a>
+          </Link>
         </div>
 
         <img className="mb-5 rounded-2xl" src={ImageUrl(frontmatter.image)} alt="..." />
@@ -58,11 +57,11 @@ export default function PostPage({ content, frontmatter }) {
 
               </div> */}
         <div className="flex flex-row"><label className='text-gray-400'>အမည် -</label><h2 className="ml-3 text-bold">{frontmatter.name}</h2></div>
-        <div className="flex flex-row"><label className='text-gray-400'>ပြောခဲ့သောစကား -</label><div class="ml-3">{frontmatter.what_was_said}</div></div>
-        <div className="flex flex-row"><label className='text-gray-400'>အဖွဲ့အစည်း -</label><div class="ml-3">{frontmatter.Organization}</div></div>
-        <div className="flex flex-row"><label className='text-gray-400'>နေရပ်လိပ်စာ -</label><div class="ml-3">{frontmatter.address}</div></div>
-        <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေ့ -</label><div class="ml-3">{frontmatter.the_day_of_the_fall}</div></div>
-        <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေရာ -</label><div class="ml-3">{frontmatter.the_place_of_the_fall}</div></div>
+        <div className="flex flex-row"><label className='text-gray-400'>ပြောခဲ့သောစကား -</label><div className="ml-3">{frontmatter.what_was_said}</div></div>
+        <div className="flex flex-row"><label className='text-gray-400'>အဖွဲ့အစည်း -</label><div className="ml-3">{frontmatter.Organization}</div></div>
+        <div className="flex flex-row"><label className='text-gray-400'>နေရပ်လိပ်စာ -</label><div className="ml-3">{frontmatter.address}</div></div>
+        <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေ့ -</label><div className="ml-3">{frontmatter.the_day_of_the_fall}</div></div>
+        <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေရာ -</label><div className="ml-3">{frontmatter.the_place_of_the_fall}</div></div>
 
         {/* <div className='post-body p-5 m-auto' dangerouslySetInnerHTML={{ __html: marked.parse(content) }}>
 
@@ -77,8 +76,8 @@ export default function PostPage({ content, frontmatter }) {
 
 export async function getStaticPaths() {
   //  Get files from the posts dir
-  const files = fs.readdirSync(path.join('posts'))
-
+  const files = fs.readdirSync(path.join('posts'));
+  console.log(files);
   // Get slug and frontmatter from posts
   const temppaths = files.map((filename) => {
 
@@ -86,9 +85,9 @@ export async function getStaticPaths() {
     const markdownWithMeta = fs.readFileSync(
       path.join('posts', filename),
       'utf-8'
-    )
+    );
 
-    const { data: frontmatter } = matter(markdownWithMeta)
+    const { data: frontmatter } = matter(markdownWithMeta);
 
     if (frontmatter.draft === false) {
       return {

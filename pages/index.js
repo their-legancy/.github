@@ -63,16 +63,12 @@ export default function Home() {
 
 export async function getStaticProps() {
   // Get files from the posts dir
-  const files = fs.readdirSync(path.join('posts'))
-
-
-
-
+  const files = fs.readdirSync(path.join('posts'));
 
   // Get slug and frontmatter from posts
   const tempPosts = files.map((filename) => {
     // Create slug
-    const slug = filename.replace('.md', '')
+    const slug = filename.replace('.md', '');
 
     // Get frontmatter
     const markdownWithMeta = fs.readFileSync(
@@ -80,7 +76,7 @@ export async function getStaticProps() {
       'utf-8'
     )
 
-    const { data: frontmatter } = matter(markdownWithMeta)
+    const { data: frontmatter } = matter(markdownWithMeta);
 
 
     if (frontmatter.draft === false) {
@@ -103,9 +99,9 @@ export async function getStaticProps() {
   const jsonString = JSON.stringify(posts)
   fs.writeFileSync('./search.json', jsonString, err => {
     if (err) {
-      console.log('Error writing file', err)
+      console.log('Error writing file', err);
     } else {
-      console.log('Successfully wrote file')
+      console.log('Successfully wrote file');
     }
   })
 
