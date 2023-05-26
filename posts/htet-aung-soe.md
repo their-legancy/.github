@@ -5,7 +5,7 @@ date : "2022-04-18T11:00:00Z"
 description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim facilisis nibh eget congue. Morbi quis lacus ac est fringilla finibus eu non neque."
 image : "images/zin-aung.png"
 images : ["images/zin-aung.png"]
-slug : "htet-aung-soe"
+slug : "htet aung soe"
 summary : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim facilisis nibh eget congue. Morbi quis lacus ac est fringilla finibus eu non neque. "
 tags : ["ကရင်နီတပ်", "မုဒုံ", "pdf"]
 

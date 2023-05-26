@@ -4,7 +4,7 @@ date : "2022-03-20T13:09:24Z"
 description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim facilisis nibh eget congue. Morbi quis lacus ac est fringilla finibus eu non neque."
 image : "images/zin-aung.png"
 images : ["images/zin-aung.png"]
-slug : "mg-htwe"
+slug : "mg htwe"
 summary : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim facilisis nibh eget congue. Morbi quis lacus ac est fringilla finibus eu non neque."
 tags : ["Unicorn Guerrilla Force", "ဇီးကုန်းရွာ", "pdf"]
 
