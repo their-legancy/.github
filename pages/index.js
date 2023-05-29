@@ -38,7 +38,7 @@ export default function Home() {
     <>
       <Banner />
 
-      <section id="search-result" className="w-5/6 md:w-5/6  lg:w-4/6 xl:w-3/6 mx-auto bg-[#000000] flex font-medium items-self-start justify-center">
+      <section id="search-result" className="w-full flex font-medium items-self-start justify-center px-6 py-6">
 
 
         {
