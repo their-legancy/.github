@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Banner() {
     return (
-        <main className="flex flex-col items-center justify-between">
+        <main className="relative flex flex-col items-center justify-between">
             <Image
                 src="/banner-1.png"
                 alt="banner-1"
@@ -12,8 +12,8 @@ export default function Banner() {
                 height={1500}
                 priority
             />
-            <div className="relative flex place-items-center w-full flex items-center flex-col bg-[#ffffff]">
-                <div className="relative flex flex-col move-top">
+            {/* <div className="relative flex place-items-center w-full flex items-center flex-col bg-[#ffffff]"> */}
+                <div className="flex flex-col move-center">
                     <Searchbar />
                     {/* <Image
                         src="/banner-2.png"
@@ -24,7 +24,7 @@ export default function Banner() {
                         priority
                     /> */}
                 </div>
-            </div>
+            {/* </div> */}
             <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
                 <a
                     href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
