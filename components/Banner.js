@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Banner() {
     return (
-        <main className="relative flex flex-col items-center justify-between">
+        <main className="bg-[#000000] relative flex flex-col items-center justify-between">
             <Image
                 src="/banner-1.png"
                 alt="banner-1"

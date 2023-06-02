@@ -5,10 +5,10 @@ export default function Post({ post }) {
 
   const date = new Date(post.frontmatter?.date)
   return (
-    <div className="w-70 mx-auto bg-[#e2e2e2] rounded-2xl px-6 py-6 shadow-lg">
+    <div className="box bg-[#e2e2e2] rounded-2xl px-6 py-6 shadow-lg">
       <div className="flex-row items-center justify-between">
         <a href={`/blog/${post.slug}`} >
-          <img className="card-img-top w-full rounded-2xl mb-3" src={post.frontmatter.image} alt="..." />
+          <img className="w-full rounded-2xl mb-3" src={post.frontmatter.image} alt="..." />
         </a>
 
         {/* <span className="text-gray-400 text-sm">{`${date.getMonth() + 1} - ${date.getDate()} - ${date.getFullYear()}`}</span> */}
