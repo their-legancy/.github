@@ -5,7 +5,7 @@ export default function Post({ post }) {
 
   const date = new Date(post.frontmatter?.date)
   return (
-    <div className="box bg-[#e2e2e2] rounded-2xl px-6 py-6 shadow-lg">
+    <div className="box mb-4  bg-[#e2e2e2] rounded-2xl px-6 py-6 shadow-lg">
       <div className="flex-row items-center justify-between">
         <a href={`/blog/${post.slug}`} >
           <img className="w-full rounded-2xl mb-3" src={post.frontmatter.image} alt="..." />

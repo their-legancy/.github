@@ -95,9 +95,9 @@ code {
  background-color: #000;
 }
 #search-result .box {
-  display: inline-block;
-  margin: 0 1.5%;
-  width: 25%;
+  /* display: inline-block; */
+  margin: 0 1.5% 30px;
+  width: 33.33%;
 }
 
 .blog {
@@ -105,4 +105,19 @@ code {
 }
 .blog-inner {
   max-width: 420px;
+}
+@media screen and (max-width: 575px) {
+  #search-result {
+    display: block;
+  }
+  #search-result .box {
+    width: 100%;
+  }
+  .seach-form-wrapper {
+    max-width: 100%;
+  }
+  .move-center {
+    height: 107px;
+    width: 90%;
+  }
 }
