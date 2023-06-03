@@ -33,40 +33,23 @@ export default function PostPage({ content, frontmatter }) {
               <a className='flex flex-row aligns-center'><Image src="/back-arrow.png" width={25} height={19} /><span className='ml-3'>ရှေ့သို့ ပြန်သွားရန်</span></a>
             </Link>
           </div>
-          
-          <Image width={180} height={180} className="mb-5 rounded-2xl" src={ImageUrl(frontmatter.image)} alt="..." />
-
-          {/* <h1 className='post-title mt-2 p-2'>{frontmatter.title}</h1>
-              <div className='post-date m-1 p-2'>
-
-                <div><h6>{`${date.getMonth() + 1} - ${date.getDate()} - ${date.getFullYear()}`} </h6>  </div>
-                <div> {
-                  frontmatter.categories.map(
-                    category => {
-
-                      const slug = slugify(category)
-
-                      return (<Link key={category} href={`/category/${slug}`}>
-                        <a className='btn'>
-                          <h6 className=' post-title'>#{category}</h6>
-                        </a>
-                      </Link>)
-                    }
-                  )
-                } </div>
+          <div className="blog-details">
+            <div className="text-center">
 
 
-              </div> */}
-          <div className="flex flex-row"><label className='text-gray-400'>အမည် -</label><h2 className="ml-3 text-bold">{frontmatter.name}</h2></div>
-          <div className="flex flex-row"><label className='text-gray-400'>ပြောခဲ့သောစကား -</label><div className="ml-3">{frontmatter.what_was_said}</div></div>
-          <div className="flex flex-row"><label className='text-gray-400'>အဖွဲ့အစည်း -</label><div className="ml-3">{frontmatter.organization}</div></div>
-          <div className="flex flex-row"><label className='text-gray-400'>နေရပ်လိပ်စာ -</label><div className="ml-3">{frontmatter.address}</div></div>
-          <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေ့ -</label><div className="ml-3">{frontmatter.the_day_of_the_fall}</div></div>
-          <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေရာ -</label><div className="ml-3">{frontmatter.the_place_of_the_fall}</div></div>
+              <Image width={300} height={300} className="mb-5 rounded-2xl" src={ImageUrl(frontmatter.image)} alt="..." />
+            </div>
 
-          {/* <div className='post-body p-5 m-auto' dangerouslySetInnerHTML={{ __html: marked.parse(content) }}>
+            <div className="flex flex-row align-center justify-center"><h2 className="ml-3 text-bold">{frontmatter.name}</h2></div>
+            <div className="flex flex-row"><label className='text-gray-400'>ပြောခဲ့သောစကား -</label><div className="ml-3">{frontmatter.what_was_said}</div></div>
+            <div className="flex flex-row"><label className='text-gray-400'>အဖွဲ့အစည်း -</label><div className="ml-3">{frontmatter.organization}</div></div>
+            <div className="flex flex-row"><label className='text-gray-400'>နေရပ်လိပ်စာ -</label><div className="ml-3">{frontmatter.address}</div></div>
+            <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေ့ -</label><div className="ml-3">{frontmatter.the_day_of_the_fall}</div></div>
+            <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေရာ -</label><div className="ml-3">{frontmatter.the_place_of_the_fall}</div></div>
 
-        </div> */}
+          </div>
+
+
         </div>
 
       </div>

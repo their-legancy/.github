@@ -6,9 +6,9 @@ export default function Post({ post }) {
 
   const date = new Date(post.frontmatter?.date)
   return (
-    <div className="box mb-4  bg-[#e2e2e2] rounded-2xl px-6 py-6 shadow-lg">
+    <div className="box mb-4  bg-[#ffffff] rounded-2xl px-6 py-6 shadow-lg">
       <div className="flex-row items-center justify-between">
-        <a href={`/blog/${post.slug}`} className='flex items-center justify-center'>
+        <a href={`/blog/${post.slug}`} className='flex items-center justify-center mb-3'>
           <Image className="text-center rounded-2xl mb-3" src={post.frontmatter.image} alt="..." width={150} height={150}/>
         </a>
 
@@ -29,7 +29,7 @@ export default function Post({ post }) {
           )
         } </span> */}
         <div className="flex flex-row"><label className='text-gray-400'>အမည် -</label><h2 className="ml-3 text-bold">{post.frontmatter.name}</h2></div>
-        <div className="flex flex-row"><label className='text-gray-400'>ပြောခဲ့သောစကား -</label><div className="ml-3">{post.frontmatter.what_was_said}</div></div>
+        {/* <div className="flex flex-row"><label className='text-gray-400'>ပြောခဲ့သောစကား -</label><div className="ml-3">{post.frontmatter.what_was_said}</div></div> */}
         <div className="flex flex-row"><label className='text-gray-400'>အဖွဲ့အစည်း -</label><div className="ml-3">{post.frontmatter.organization}</div></div>
         {/* <div className="flex flex-row"><label className='text-gray-400'>နေရပ်လိပ်စာ -</label><div className="ml-3">{post.frontmatter.address}</div></div>
         <div className="flex flex-row"><label className='text-gray-400'>ကျဆုံးသောနေ့ -</label><div className="ml-3">{post.frontmatter.the_day_of_the_fall}</div></div>

@@ -7,7 +7,7 @@ import Banner from "../components/Banner";
 import search from "../search.json";
 
 import { sortByDate, slugify, ImageUrl } from '../utils';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <>
       <Banner />
-
+    
       <section id="search-result" className="w-full font-medium px-6 py-6">
         <div className="search-result-inner flex flex-wrap items-self-start justify-center">
 

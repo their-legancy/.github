@@ -1,18 +1,19 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import Link from 'next/link'
 import Search from "../search.json";
 import { slugify } from "../utils";
 
 export default function Searchbar() {
   const [search, setSearch] = useState('');
-  const router = useRouter();
+  // const router = useRouter();
   const [route, setRoute] = useState('');
   function handleSubmit(e) {
     e.preventDefault();
     var formData = new FormData(e.target);
     const form_values = Object.fromEntries(formData);
-    router.push("?q=" + form_values.search_text.toLowerCase()+ "#search-result");
+    // router.push();
+    window.location.href="?q=" + form_values.search_text.toLowerCase()+ "#search-result";
   }
   const change = e => {
     const newvalue = e.target.value;
@@ -24,7 +25,7 @@ export default function Searchbar() {
 
     <div className="seach-form-wrapper">
 
-      <form className="items-center flex justify-center" onSubmit={handleSubmit}>
+      <form method="POST" className="items-center flex justify-center" onSubmit={handleSubmit}>
         <input required
           type={"text"}
           name="search_text"
@@ -34,10 +35,11 @@ export default function Searchbar() {
           placeholder="အမည်တစ်ခုရိုက်ပါ..."
 
         />
-        <button type="submit"
+        <button type="submit" scroll={false}
           className="text-white right-2.5 bottom-2.5 bg-[#60E0D4] hover:bg-[#60E0D4] focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#60E0D4] ">
           ရှာပါ</button>
       </form>
+      
     </div>
   )
 }
