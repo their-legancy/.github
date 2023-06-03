@@ -38,20 +38,22 @@ export default function Home() {
     <>
       <Banner />
 
-      <section id="search-result" className="w-full flex font-medium items-self-start justify-center px-6 py-6">
+      <section id="search-result" className="w-full font-medium px-6 py-6">
+        <div className="search-result-inner flex flex-wrap items-self-start justify-center">
 
 
-        {
-          posts.length > 0 ?
-            posts.map((post, index) => (
-              <Post key={index} post={post} />
-            )) : <div className='m-auto p-5 mx-5 '>
-              <h2 className='text-center text-white'>
-                {query.q ? `${query.q} အမည်ဖြင့် အချက်အလက်မရှိပါ။  ` : 'ကျေးဇူးပြု၍ အထက်ပါအကွက်တွင် ရှာဖွေပါ၊ ရလဒ်သည် ဤနေရာတွင် ပြပါမည်။'}
-              </h2>
-            </div>
-        }
 
+          {
+            posts.length > 0 ?
+              posts.map((post, index) => (
+                <Post key={index} post={post} />
+              )) : <div className='m-auto p-5 mx-5 '>
+                <h2 className='text-center text-white'>
+                  {query.q ? `${query.q} အမည်ဖြင့် အချက်အလက်မရှိပါ။  ` : 'ကျေးဇူးပြု၍ အထက်ပါအကွက်တွင် ရှာဖွေပါ၊ ရလဒ်သည် ဤနေရာတွင် ပြပါမည်။'}
+                </h2>
+              </div>
+          }
+        </div>
 
       </section>
 

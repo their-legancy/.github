@@ -34,7 +34,7 @@ export default function PostPage({ content, frontmatter }) {
             </Link>
           </div>
           
-          <img className="w-full mb-5 rounded-2xl" src={ImageUrl(frontmatter.image)} alt="..." />
+          <Image width={180} height={180} className="mb-5 rounded-2xl" src={ImageUrl(frontmatter.image)} alt="..." />
 
           {/* <h1 className='post-title mt-2 p-2'>{frontmatter.title}</h1>
               <div className='post-date m-1 p-2'>

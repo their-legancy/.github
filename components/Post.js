@@ -1,5 +1,6 @@
-import Link from 'next/link'
-import { slugify } from '../utils'
+import Link from 'next/link';
+import { slugify } from '../utils';
+import Image from 'next/image';
 
 export default function Post({ post }) {
 
@@ -7,8 +8,8 @@ export default function Post({ post }) {
   return (
     <div className="box mb-4  bg-[#e2e2e2] rounded-2xl px-6 py-6 shadow-lg">
       <div className="flex-row items-center justify-between">
-        <a href={`/blog/${post.slug}`} >
-          <img className="w-full rounded-2xl mb-3" src={post.frontmatter.image} alt="..." />
+        <a href={`/blog/${post.slug}`} className='flex items-center justify-center'>
+          <Image className="text-center rounded-2xl mb-3" src={post.frontmatter.image} alt="..." width={150} height={150}/>
         </a>
 
         {/* <span className="text-gray-400 text-sm">{`${date.getMonth() + 1} - ${date.getDate()} - ${date.getFullYear()}`}</span> */}

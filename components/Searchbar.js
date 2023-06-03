@@ -24,7 +24,7 @@ export default function Searchbar() {
 
     <div className="seach-form-wrapper">
 
-      <form className="items-center p-4 flex justify-center" onSubmit={handleSubmit}>
+      <form className="items-center flex justify-center" onSubmit={handleSubmit}>
         <input required
           type={"text"}
           name="search_text"
