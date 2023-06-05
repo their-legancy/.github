@@ -9,6 +9,7 @@ summary : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim
 tags : ["Unicorn Guerrilla Force", "ဇီးကုန်းရွာ", "pdf"]
 
 name: "မောင်ထွေး"
+# age: "20"
 what_was_said: "အမေ့ကိုသတိရတယ်"
 organization: "Unicorn Guerrilla Force"
 address: "ရွှေဘို (ဇီးကုန်းရွာ)"

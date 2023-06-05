@@ -1,8 +1,6 @@
 import { useState } from "react";
 // import { useRouter } from "next/router";
-import Link from 'next/link'
-import Search from "../search.json";
-import { slugify } from "../utils";
+import Link from 'next/link';
 
 export default function Searchbar() {
   const [search, setSearch] = useState('');
@@ -36,7 +34,7 @@ export default function Searchbar() {
 
         />
         <button type="submit" scroll={false}
-          className="text-white right-2.5 bottom-2.5 bg-[#60E0D4] hover:bg-[#60E0D4] focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#60E0D4] ">
+          className="text-white right-2.5 bottom-2.5 bg-[#3e8193] hover:bg-[#3e8193] focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#3e8193]">
           ရှာပါ</button>
       </form>
       

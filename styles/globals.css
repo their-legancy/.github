@@ -64,6 +64,10 @@ code {
   padding: 0 40px 0;
   background-color: rgba(217, 217, 217, 0.26);
   margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .align-self-flex-end {
@@ -73,10 +77,9 @@ code {
 .seach-form-wrapper {
   max-width: 90%;
   width: 100%;
-} 
-.search-result-inner {
-  margin-top: 70px;
 }
+
+
 .seach-form-wrapper input {
   border: 1px solid #ddd;
   width: 100%;
@@ -109,13 +112,24 @@ code {
 
 #search-result {
   background-color: #383737;
+}
+
+.search-result-inner {
+  /* margin-top: 70px; */
   min-height: 100vh;
+  align-items: center;
 }
 
 #search-result .box {
   margin: 0 1.5% 30px;
   width: 33.33%;
+  min-width: 267px;
   max-width: 267px;
+  height: 336px;
+}
+
+#search-result .box label {
+  flex: 0 0 auto;
 }
 
 .blog {
@@ -125,10 +139,39 @@ code {
 .blog-inner {
   max-width: 1024px;
 }
+
 .blog-details {
-  max-width: fit-content;
+  max-width: 800px;
   margin: 0 auto;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  font-size: 20px;
+
+
 }
+
+.blog-details h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.blog-details label {
+  font-weight: bold;
+  /* flex: 0 0 300px;
+  text-align: right; */
+}
+
+.blog-details .flex {
+  margin-bottom: 30px;
+  justify-content: center;
+  text-align: center;
+}
+
+.blog .bird {
+  top: 20px;
+  right: 20px;
+}
+
 @media screen and (max-width: 575px) {
   #search-result {
     display: block;
@@ -146,6 +189,7 @@ code {
     height: 107px;
     width: 90%;
   }
+
   .banner h1 {
     font-size: 10px;
   }
