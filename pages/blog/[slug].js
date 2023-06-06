@@ -1,9 +1,9 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import { marked } from 'marked'
-import Link from 'next/link'
-import { slugify, ImageUrl } from '../../utils'
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { marked } from 'marked';
+import Link from 'next/link';
+import { slugify, ImageUrl } from '../../utils';
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 
@@ -35,23 +35,23 @@ export default function PostPage({ content, frontmatter }) {
         </div>
         <div className="blog-details relative">
           <div className="flex flex-row items-center">
-            <div className="text-center">
-              <Image width={300} height={300} className="mb-5" src={ImageUrl(frontmatter.image)} alt={frontmatter.name} />
+            <div className="text-center relative">
+              <Image width={300} height={300} className="mb-5 rounded-2xl" src={ImageUrl(frontmatter.image)} alt={frontmatter.name} />
             </div>
           </div>
-          <div className="flex flex-row"><h2 className="ml-3 text-bold">{frontmatter.name}</h2></div>
+          <div className="flex flex-row"><h1 className="ml-3 text-bold">{frontmatter.name}</h1></div>
           {(typeof (frontmatter.age) !== 'undefined') ?
             <div className="flex flex-row"><h2 className="ml-3 text-bold">{frontmatter.age}</h2></div>
-          : ""}
+            : ""}
 
 
 
-          <div className="flex flex-row"><label className=''>ပြောခဲ့သောစကား -</label><div className="ml-3">{frontmatter.what_was_said}</div></div>
-          <div className="flex flex-row"><label className=''>အဖွဲ့အစည်း -</label><div className="ml-3">{frontmatter.organization}</div></div>
-          <div className="flex flex-row"><label className=''>နေရပ်လိပ်စာ -</label><div className="ml-3">{frontmatter.address}</div></div>
-          <div className="flex flex-row"><label className=''>ကျဆုံးသောနေ့ -</label><div className="ml-3">{frontmatter.the_day_of_the_fall}</div></div>
-          <div className="flex flex-row"><label className=''>ကျဆုံးသောနေရာ -</label><div className="ml-3">{frontmatter.the_place_of_the_fall}</div></div>
+          <div className="flex flex-row"><label className=''>ကျဆုံးသောနေ့ </label><div className="ml-3">{frontmatter.the_day_of_the_fall}</div></div>
+          <div className="flex flex-row"><label className=''>ကျဆုံးသောနေရာ </label><div className="ml-3">{frontmatter.the_place_of_the_fall}</div></div>
+          <div className="flex flex-row"><label className=''>အဖွဲ့အစည်း </label><div className="ml-3">{frontmatter.organization}</div></div>
+          <div className="flex flex-row"><label className=''>နေရပ်လိပ်စာ </label><div className="ml-3">{frontmatter.address}</div></div>
 
+          <div className="flex flex-row"><label className=''>ပြောခဲ့သောစကား </label><div className="ml-3">{frontmatter.what_was_said}</div></div>
         </div>
 
 
