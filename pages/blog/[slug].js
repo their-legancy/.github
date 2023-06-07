@@ -45,13 +45,22 @@ export default function PostPage({ content, frontmatter }) {
             : ""}
 
 
+          {(typeof (frontmatter.the_day_of_the_fall) !== 'undefined') ?
+            <div className="flex flex-row"><label className=''>ကျဆုံးသောနေ့ </label><div className="ml-3">{frontmatter.the_day_of_the_fall}</div></div>
+            : ""}
+          {(typeof (frontmatter.the_place_of_the_fall) !== 'undefined') ?
+            <div className="flex flex-row"><label className=''>ကျဆုံးသောနေရာ </label><div className="ml-3">{frontmatter.the_place_of_the_fall}</div></div>
+            : ""}
+          {(typeof (frontmatter.organization) !== 'undefined') ?
+            <div className="flex flex-row"><label className=''>အဖွဲ့အစည်း </label><div className="ml-3">{frontmatter.organization}</div></div>
+            : ""}
+          {(typeof (frontmatter.address) !== 'undefined') ?
+            <div className="flex flex-row"><label className=''>နေရပ်လိပ်စာ </label><div className="ml-3">{frontmatter.address}</div></div>
+            : ""}
+          {(typeof (frontmatter.what_was_said) !== 'undefined') ?
 
-          <div className="flex flex-row"><label className=''>ကျဆုံးသောနေ့ </label><div className="ml-3">{frontmatter.the_day_of_the_fall}</div></div>
-          <div className="flex flex-row"><label className=''>ကျဆုံးသောနေရာ </label><div className="ml-3">{frontmatter.the_place_of_the_fall}</div></div>
-          <div className="flex flex-row"><label className=''>အဖွဲ့အစည်း </label><div className="ml-3">{frontmatter.organization}</div></div>
-          <div className="flex flex-row"><label className=''>နေရပ်လိပ်စာ </label><div className="ml-3">{frontmatter.address}</div></div>
-
-          <div className="flex flex-row"><label className=''>ပြောခဲ့သောစကား </label><div className="ml-3">{frontmatter.what_was_said}</div></div>
+            <div className="flex flex-row"><label className=''>ပြောခဲ့သောစကား </label><div className="ml-3">{frontmatter.what_was_said}</div></div>
+            : ""}
         </div>
 
 

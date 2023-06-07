@@ -1,3 +1,3 @@
-const SITE_URL = 'https://next-js-mdacja2xw-braveheart.vercel.app/'
+const SITE_URL = 'http://demo.their-legacy.info/'
 
 export default SITE_URL

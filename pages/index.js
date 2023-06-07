@@ -17,7 +17,7 @@ export default function Home() {
   search.map(
     (post) => {
       if (post.frontmatter.draft === false) {
-        if (post.frontmatter.name.toLowerCase().includes(query.q) || post.frontmatter.summary.toLowerCase().includes(query.q) || post.frontmatter.description.toLowerCase().includes(query.q)) {
+        if (post.frontmatter.name.toLowerCase().includes(query.q)) {
           TempPosts.push(post)
         } else {
           TempPosts.push(null)
