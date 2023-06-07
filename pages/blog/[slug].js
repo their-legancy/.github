@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { slugify, ImageUrl } from '../../utils';
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
+import Head from 'next/head';
 
 export default function PostPage({ content, frontmatter }) {
   const date = new Date(frontmatter.date)
@@ -24,7 +25,11 @@ export default function PostPage({ content, frontmatter }) {
 
 
   return (
-
+    <>
+    <Head>
+        <title>{frontmatter.name}  | Their Legency</title>
+      </Head>
+    
     <div className="blog px-8 py-8 bg-[#3e8193]">
       <div className="blog-inner mx-auto">
         <img src="/bird.png" width={100} height={100} className='absolute bird' />
@@ -67,7 +72,7 @@ export default function PostPage({ content, frontmatter }) {
       </div>
 
     </div>
-
+    </>
   )
 }
 

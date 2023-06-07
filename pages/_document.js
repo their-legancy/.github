@@ -11,7 +11,7 @@ export default function Document() {
           သူရဲကောင်းမောင်နှမများအား လွမ်းဆွတ်တမ်းတ သတိတရရှိသူများ ဝင်ရောက်ရှာဖွေ ဂုဏ်ယူနိုင်သောနေရာလေး ဖြစ်စေရန် ရည်ရွယ်ပါသည်။"
           key="desc"
         />
-        <title>Their Legency</title>
+        
       </Head>
       <body>
         <Main />
