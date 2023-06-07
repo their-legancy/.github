@@ -8,7 +8,7 @@ export default function Banner() {
                     alt='banner'
                     src='/banner-1.webp'
                     layout='fill'
-                    objectFit='cover'
+                    objectFit='cover' sizes="100vw"
                     priority
                 />
             </div>
