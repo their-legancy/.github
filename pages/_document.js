@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang='my'>
       <Head>
-        <title>Their Legency</title>
         <meta property="og:title" content="Their Legency" key="title" />
         <meta
           name="description"
@@ -12,7 +11,7 @@ export default function Document() {
           သူရဲကောင်းမောင်နှမများအား လွမ်းဆွတ်တမ်းတ သတိတရရှိသူများ ဝင်ရောက်ရှာဖွေ ဂုဏ်ယူနိုင်သောနေရာလေး ဖြစ်စေရန် ရည်ရွယ်ပါသည်။"
           key="desc"
         />
-        <link rel="preload" href="banner-1.png" as="image" />
+        <title>Their Legency</title>
       </Head>
       <body>
         <Main />
