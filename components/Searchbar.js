@@ -34,7 +34,7 @@ export default function Searchbar() {
 
         />
         <button type="submit" scroll="false"
-          className="text-white right-2.5 bottom-2.5 bg-[#3e8193] hover:bg-[#3e8193] focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#3e8193]">
+          className="text-white right-2.5 bottom-2.5 bg-[#3e8193] focus:outline-none font-medium rounded-lg text-sm px-4 py-2">
           ရှာပါ</button>
       </form>
       
