@@ -4,9 +4,8 @@ export default function Document() {
   return (
     <Html lang='my'>
       <Head>
-        <title>
-          Their Legency
-        </title>
+      <title>Their Legency</title>
+        <meta property="og:title" content="Their Legency" key="title" />
         <meta
           name="description"
           content="ဤနေရာသည် ကြွေလွင့်သွားသော သူရဲကောင်းများကို ဂုဏ်ယူစွာဖြင့် မှတ်တမ်းတင်ထားသောနေရာ ဖြစ်ပါသည်။
