@@ -120,4 +120,4 @@ export async function getStaticProps({ params }) {
 
     }
   };
-}
+} 
